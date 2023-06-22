@@ -4,7 +4,6 @@
         fetch( URL )
         .then(response => response.json())
         .then(data => {
-            console.log(data)
             let time_zone = data["timezone"]
             let latitude = data["latitude"]
             let longitude = data["longitude"]
@@ -14,7 +13,6 @@
             timezoneHTML.textContent = time_zone
             latitudeHTML.textContent = latitude
             longitudeHTML.textContent = longitude
-            plot(data)
         })
         .catch(console.error);
     }
